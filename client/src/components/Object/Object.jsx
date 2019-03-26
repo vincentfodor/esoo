@@ -19,30 +19,34 @@ const Object = ({ hazard, minDiameter, maxDiameter, name, approachDate, velocity
           <div className="container-item">
             <h2 className="object-subheadline">Gen. data</h2>
             <table className="object-props" border="0">
-              <tr className="object-props-row">
-                <td className="object-props-col object-props-col-left">D. min</td>
-                <td className="object-props-col">{minDiameter}</td>
-              </tr>
-              <tr className="object-props-row">
-                <td className="object-props-col object-props-col-left">D. max</td>
-                <td className="object-props-col">{maxDiameter}</td>
-              </tr>
+              <tbody>
+                <tr className="object-props-row">
+                  <td className="object-props-col object-props-col-left">D. min</td>
+                  <td className="object-props-col">{minDiameter.toFixed(6) + ' m'}</td>
+                </tr>
+                <tr className="object-props-row">
+                  <td className="object-props-col object-props-col-left">D. max</td>
+                  <td className="object-props-col">{maxDiameter.toFixed(6) + ' m'}</td>
+                </tr>
+              </tbody>
             </table>
           </div>
           <div className="container-item container-item--padding-left">
             <h2 className="object-subheadline">Approach</h2>
             <table className="object-props" border="0">
-              <tr className="object-props-row">
-                <td className="object-props-col" colSpan="2">{approachDate}</td>
-              </tr>
-              <tr className="object-props-row">
-                <td className="object-props-col object-props-col-left">Velocity</td>
-                <td className="object-props-col">{velocity + ' km/s'}</td>
-              </tr>
-              <tr className="object-props-row">
-                <td className="object-props-col object-props-col-left">Miss dist.</td>
-                <td className="object-props-col">{missDistance + ' km'}</td>
-              </tr>
+              <tbody>
+                <tr className="object-props-row">
+                  <td className="object-props-col" colSpan="2">{approachDate}</td>
+                </tr>
+                <tr className="object-props-row">
+                  <td className="object-props-col object-props-col-left">Velocity</td>
+                  <td className="object-props-col">{velocity.toFixed(6) + ' km/s'}</td>
+                </tr>
+                <tr className="object-props-row">
+                  <td className="object-props-col object-props-col-left">Miss dist.</td>
+                  <td className="object-props-col">{missDistance + ' km'}</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
