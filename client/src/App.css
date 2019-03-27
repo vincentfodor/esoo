@@ -48,7 +48,7 @@
 .paragraph {
   margin: 0 0 0.66em 0;
   font-size: 14pt;
-  color: rgba(0, 0, 0, 0.9)
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .objects:nth-child(2n) {

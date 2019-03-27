@@ -1,8 +1,6 @@
 import React from 'react';
 import './Object.css';
 
-import asteroidImage from './asteroid@0.5x.png';
-
 const Object = ({ hazard, minDiameter, maxDiameter, name, approachDate, velocity, missDistance }) => {
   const renderHazardIndocatorClass = hazard ? 'object-hazard-indicator object-hazard-indicator--hazard' : 'object-hazard-indicator object-hazard-indicator--no-hazard'
   const predictedDiameter = (minDiameter+maxDiameter)/2;
@@ -11,7 +9,7 @@ const Object = ({ hazard, minDiameter, maxDiameter, name, approachDate, velocity
     <div className="object">
       <div className="object-left">
         <span className={renderHazardIndocatorClass}></span>
-        <img className="object-asteroid-representation" src={asteroidImage} alt="Asteroid rep" width={renderAsteroidRepresentation + 'px'} height={renderAsteroidRepresentation + 'px'} />
+        <span className="object-asteroid-representation" style={{width: renderAsteroidRepresentation + 'px', height: renderAsteroidRepresentation + 'px'}}></span>
       </div>
       <div className="object-right">
         <h2 className="object-headline">{name}</h2>
