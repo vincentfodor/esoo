@@ -32,7 +32,7 @@
 }
 
 .logo {
-  margin: 0 0 1em 0;
+  margin: 0 0 1.66em 0;
   width: 150px;
 }
 
@@ -110,5 +110,13 @@
   .logo {
     align-self: center;
     margin: 0 0 2.33em 0;
+  }
+
+  .container-item {
+    margin-bottom: 1em;
+  }
+
+  .container-item--padding-left {
+    padding-left: 0;
   }
 }
