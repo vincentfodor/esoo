@@ -10,7 +10,7 @@ const server = new ApolloServer({
     resolvers,
     dataSources: () => ({
         //Replace DEMO_KEY with NASA Api key for more requests
-        objectApi: new ObjectApi('DEMO_KEY')
+        objectApi: new ObjectApi('BRP1s6aJaB3F4H0t0bcpte7UnYu62fdyBawiCgdw')
     }),
     playground: false
 });
