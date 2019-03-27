@@ -19,21 +19,40 @@
   justify-content: center;
 }
 
-.object-hazard-indicator {
+.object-hazard {
   position: absolute;
   top: 25px;
+  display: flex;
+}
+
+.object-hazard-indicator {
   display: inline-block;
   width: 15px;
   height: 15px;
   border-radius: 50%;
 }
 
-.object-hazard-indicator--hazard {
+.object-hazard--type-hazard .object-hazard-indicator {
+  background-color: #5AFFC1;
+}
+
+.object-hazard--type-no-hazard .object-hazard-indicator {
   background-color: #FF5A5A;
 }
 
-.object-hazard-indicator--no-hazard {
-  background-color: #5AFFC1;
+.object-hazard-label {
+  margin-left: 0.66em;
+  text-transform: uppercase;
+  font-size: 10pt;
+  font-weight: 600;
+}
+
+.object-hazard--type-hazard .object-hazard-label {
+  color: #5AFFC1;
+}
+
+.object-hazard--type-no-hazard .object-hazard-label {
+  color: #FF5A5A;
 }
 
 .object-asteroid-representation {

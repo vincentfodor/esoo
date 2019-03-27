@@ -2,13 +2,17 @@ import React from 'react';
 import './Object.css';
 
 const Object = ({ hazard, minDiameter, maxDiameter, name, approachDate, velocity, missDistance }) => {
-  const renderHazardIndocatorClass = hazard ? 'object-hazard-indicator object-hazard-indicator--hazard' : 'object-hazard-indicator object-hazard-indicator--no-hazard'
+  const renderHazardClass = hazard ? 'object-hazard object-hazard--type-no-hazard' : 'object-hazard object-hazard--type-hazard';
+  const renderHazardLabel = hazard ? 'Hazardous' : 'Not hazardous';
   const predictedDiameter = (minDiameter+maxDiameter)/2;
   const renderAsteroidRepresentation = (predictedDiameter > 120) ? 120 : predictedDiameter
   return (
     <div className="object">
       <div className="object-left">
-        <span className={renderHazardIndocatorClass}></span>
+        <div className={renderHazardClass}>
+          <span className='object-hazard-indicator'></span>
+          <label className="object-hazard-label">{renderHazardLabel}</label>
+        </div>
         <span className="object-asteroid-representation" style={{width: renderAsteroidRepresentation + 'px', height: renderAsteroidRepresentation + 'px'}}></span>
       </div>
       <div className="object-right">
