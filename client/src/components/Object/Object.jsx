@@ -19,7 +19,7 @@ const Object = ({ hazard, minDiameter, maxDiameter, name, approachDate, velocity
         <h2 className="object-headline">{name}</h2>
         <div className="container container--no-margin">
           <div className="container-item">
-            <h2 className="object-subheadline">Gen. data</h2>
+            <h2 className="object-subheadline">General data</h2>
             <table className="object-props" border="0">
               <tbody>
                 <tr className="object-props-row">
