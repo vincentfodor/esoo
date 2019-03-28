@@ -43,7 +43,7 @@ class App extends Component {
           </div>
         </div>
         <div className="container container--no-flex">
-          <Query query={GET_OBJECTS} variables={{startDate: Moment().format('YYYY-MM-DD'), endDate: Moment().day(7).format('YYYY-MM-DD')}}>
+          <Query query={GET_OBJECTS} variables={{startDate: Moment().format('YYYY-MM-DD'), endDate: Moment().add(7, 'days').format('YYYY-MM-DD')}}>
             {({ loading, error, data }) => {
               if(loading) return <p>Loading data...</p>
               if(error) return <p>error</p>
