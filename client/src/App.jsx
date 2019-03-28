@@ -23,6 +23,7 @@ const GET_OBJECTS = gql`
       close_approach_date
       relative_velocity
       miss_distance
+      orbit_class_type
     }
   }
 `
@@ -56,7 +57,7 @@ class App extends Component {
                   <p className="paragraph objects-indicator">
                     There are currently <span className="objects-indicator-num objects-indicator-num--hazardous">{objects_hazardous}</span> hazardous and <span className="objects-indicator-num objects-indicator-num--not-hazardous">{objects_not_hazardous}</span> non-hazardous objects surrounding earth.
                   </p>
-                  {data.getObjects.map(object => <Object key={object.id} hazard={object.is_potentially_hazardous_asteroid} minDiameter={object.diameter_min} maxDiameter={object.diameter_max} name={object.name} approachDate={object.close_approach_date} velocity={object.relative_velocity} missDistance={object.miss_distance} />)}
+                  {data.getObjects.map(object => <Object key={object.id} hazard={object.is_potentially_hazardous_asteroid} minDiameter={object.diameter_min} maxDiameter={object.diameter_max} name={object.name} approachDate={object.close_approach_date} velocity={object.relative_velocity} missDistance={object.miss_distance} orbitClassType={object.orbit_class_type} />)}
                 </div>
               )
             }}

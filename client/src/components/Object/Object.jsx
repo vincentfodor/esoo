@@ -1,7 +1,7 @@
 import React from 'react';
 import './Object.css';
 
-const Object = ({ hazard, minDiameter, maxDiameter, name, approachDate, velocity, missDistance }) => {
+const Object = ({ hazard, minDiameter, maxDiameter, name, approachDate, velocity, missDistance, orbitClassType }) => {
   const renderHazardClass = hazard ? 'object-hazard object-hazard--type-no-hazard' : 'object-hazard object-hazard--type-hazard';
   const renderHazardLabel = hazard ? 'Hazardous' : 'Not hazardous';
   const predictedDiameter = (minDiameter+maxDiameter)/2;
@@ -22,6 +22,10 @@ const Object = ({ hazard, minDiameter, maxDiameter, name, approachDate, velocity
             <h2 className="object-subheadline">General data</h2>
             <table className="object-props" border="0">
               <tbody>
+                <tr className="object-props-row">
+                  <td className="object-props-col object-props-col-left">Class: </td>
+                  <td className="object-props-col">{orbitClassType}</td>
+                </tr>
                 <tr className="object-props-row">
                   <td className="object-props-col object-props-col-left">D. min</td>
                   <td className="object-props-col">{minDiameter.toFixed(6) + ' m'}</td>

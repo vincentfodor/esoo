@@ -15,5 +15,6 @@ export default gql`
       close_approach_date: String!
       relative_velocity: Float!
       miss_distance: Float!
+      orbit_class_type: String!
     }
 `
