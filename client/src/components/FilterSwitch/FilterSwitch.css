@@ -1,0 +1,37 @@
+.filter-switch {
+  display: flex;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-switch--disabled {
+  filter: grayscale(100%)
+}
+
+.filter-switch-button {
+  width: 150px;
+  text-align: center;
+  padding: 0.33em 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  outline: 0;
+}
+
+.filter-switch-button--active {
+  opacity: 1;
+}
+
+.filter-switch-button--left {
+  background-color: #FF5A5A;
+  color: rgb(255, 255, 255)
+}
+
+.filter-switch-button--right {
+  background-color: #5AFFC1;
+}
+
+.filter-switch-button-label {
+  padding: 1em 0;
+  font-size: 16px;
+  cursor: pointer;
+}

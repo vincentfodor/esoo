@@ -8,6 +8,8 @@
 .container {
   display: flex;
   margin: 0 0 7.33em 0;
+  float: left;
+  width: 100%;
 }
 
 .container--no-flex {
@@ -21,6 +23,10 @@
 
 .container--no-margin {
   margin: 0;
+}
+
+.container--margin-1 {
+  margin: 0 0 2em 0;
 }
 
 .container-item--padding-left {
