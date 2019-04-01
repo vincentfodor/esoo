@@ -33,6 +33,7 @@
 
 .filter-switch-button-label {
   padding: 1em 0;
-  font-size: 16px;
+  font-size: 10pt;
   cursor: pointer;
+  text-transform: uppercase;
 }

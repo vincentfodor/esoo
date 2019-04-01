@@ -82,7 +82,26 @@
 
 .objects-indicator-num--not-hazardous {
   background-color: #5AFFC1;
-  color: rgb(0, 0, 0)
+  color: rgb(0, 0, 0);
+}
+
+.objects-filter {
+  display: flex;
+  margin: 0 0 2em 0;
+}
+
+.objects-filter-button {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  margin: 0 1em 0 0;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.objects-filter-button:hover {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 1400px) {
