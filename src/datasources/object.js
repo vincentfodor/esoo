@@ -18,6 +18,7 @@ class ObjectApi {
               }
               return response;
             })
+            .catch(e => console.log(e));
     }
 
     objectReducer(object) {
@@ -30,7 +31,7 @@ class ObjectApi {
         close_approach_date: object.close_approach_data[0].close_approach_date,
         relative_velocity: object.close_approach_data[0].relative_velocity.kilometers_per_second,
         miss_distance: object.close_approach_data[0].miss_distance.kilometers,
-        orbit_class_type: object.orbital_data.orbit_class.orbit_class_type
+        orbit_class_type: (object.orbital_data.orbit_class === null) ? 'Unkown' : object.orbital_data.orbit_class.orbit_class_type
       }
     }
 }
